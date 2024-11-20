@@ -12,16 +12,12 @@ public class Asignatura {
         this("Sin nombre",Tipo.FUNDAMENTACION);
     }
 
-    public Asignatura(int codigoExterno,Tipo tipo) {
-        this.codigoExterno = codigoExterno;
-        this.tipo = tipo;
+    public Asignatura(int codigoInterno,Tipo tipo) {
+        this("Sin nombre",0 ,codigoInterno,tipo);
     }
-
-
+    
     public Asignatura(String nombre, Tipo tipo) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-
+        this(nombre, 0, 0,tipo);
     }
 
     public Asignatura(String nombre, int codigoInterno, int codigoExterno,Tipo tipo) {
@@ -50,5 +46,7 @@ public class Asignatura {
     public void setCodigoInterno(int codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
-    
+    public void setCodigoInterno(double codigoInterno) {
+    	 this.codigoInterno = (int) codigoInterno;
+    }
 }
